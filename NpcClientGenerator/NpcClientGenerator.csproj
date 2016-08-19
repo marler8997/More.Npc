@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MoreRootPath>$(MSBuildProjectDirectory)\..\..\More</MoreRootPath>
+    <ProductVersion>9.0.21022</ProductVersion>
+  </PropertyGroup>
+  <Import Project="$(MoreRootPath)\Build\CSharpProject.include" />
+  <PropertyGroup>
+    <ProjectGuid>{DAF8FBE2-82DB-434A-8DF5-B090737F2A3B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>More</RootNamespace>
+    <AssemblyName>NpcClientGenerator</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Filters.cs" />
+    <Compile Include="NpcClientGeneratorMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\More\Core\More.Core.csproj">
+      <Project>{DA7E67C2-CE13-43B3-9F03-F7BFAC405E62}</Project>
+      <Name>More.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\More\Miscellaneous\More.Miscellaneous.csproj">
+      <Project>{1226B927-2F12-4788-89CC-6CD5E3C33DE8}</Project>
+      <Name>More.Miscellaneous</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\More\Net\Dns\More.Net.Dns.csproj">
+      <Project>{B8EE685A-137B-47B1-A972-BFB09AA2D486}</Project>
+      <Name>More.Net.Dns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\More\Sos\More.Sos.csproj">
+      <Project>{7BEF81B1-4442-451F-B20E-1A9AB0B25A51}</Project>
+      <Name>More.Sos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\More.Npc.csproj">
+      <Project>{FC7E6554-A125-4F59-93D9-0BA3AAF0FA3A}</Project>
+      <Name>More.Npc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(TargetImportFile)" />
+</Project>
